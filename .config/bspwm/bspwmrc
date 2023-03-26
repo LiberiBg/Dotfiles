@@ -30,5 +30,4 @@ $HOME/.config/polybar/launch.sh &
 playerctl daemon &
 xidlehook --not-when-audio --not-when-fullscreen --timer 600 '/usr/local/bin/slock' '' &
 xidlehook --not-when-fullscreen --timer 900 '/usr/local/bin/slock' '' &
-redshift &
 sxhkd -m 1

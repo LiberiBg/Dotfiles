@@ -147,5 +147,5 @@ super + i
         flameshot gui
 
 alt + Return
-        $HOME/.local/scripts/scratchpad
+        sh $HOME/.local/bin/scratchpad
 

@@ -14,12 +14,15 @@ export VISUAL='/.local/bin/bin/nvim'
  
 
 alias ..='cd ..'
+alias ...='cd ../..'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias df='df -h'
 alias free='free -m'
 alias confBspwm='nvim $HOME/.config/bspwm/bspwmrc'
+alias confSxhkd='nvim $HOME/.config/sxhkd/sxhkdrc'
+alias confbashrc='nvim $HOME/.bashrc'
 alias test='echo test'
 alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
@@ -31,6 +34,7 @@ alias onBluetooth='sudo systemctl start bluetooth'
 alias onHTTP='python -m http.server'
 alias shutdown='shutdown -h now'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dcup='docker compose up'
 
 # Setting up colors
 BLACK="\[\e[30m\]"
