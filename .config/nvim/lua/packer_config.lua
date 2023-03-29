@@ -36,15 +36,37 @@ packer.startup({
     use("folke/tokyonight.nvim")
     
    --Nvim tree
-   use {
-  "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    requires = { 
+    use({
+     "nvim-neo-tree/neo-tree.nvim",
+      branch = "v2.x",
+      requires = { 
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
-    }
-  }
+        }
+      })
+     
+    -- StatusLine  
+    use({
+      "nvim-lualine/lualine.nvim",
+      event = "BufEnter",
+      config = function()
+        require("configs.lualine")
+      end,
+      requires = { "nvim-web-devicons" },
+    })
+
+    -- Treesitter
+    use({
+      "nvim-treesitter/nvim-treesitter",
+      run = function()
+        require("configs.treesitter")
+      end,
+    })
+
+    use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter"})
+
+
 
   -- Display PackerSync result different
   end,
