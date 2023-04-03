@@ -25,6 +25,7 @@ bspc rule -a feh state=floating
 
 # Auto start
 picom -b &
+udiskie -A -s &
 nitrogen --restore &
 $HOME/.config/polybar/launch.sh &
 playerctl daemon &
