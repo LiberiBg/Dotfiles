@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+function send_notification() {
+        volume=$(pamixer --get-volume)
+        dunstify -a "changevolume" -u low -r 9991 -h int:value:"$volume" "Volume: $volume%" -t 2000
+}
+
+case $1 in
+up)
+        if [ "$(pamixer --get-volume)" -le 145 ]; then
+            pamixer --allow-boost -i 5
+            send_notification
+        
+          elif [ "$(pamixer --get-volume)" -eq 150 ]; then
+            dunstify -a "changevolume" -u low -r 9991 "Volume: Volume maximum atteint !" -t 2000
+
+        fi
+        ;;
+down)
+        pamixer --allow-boost -d 5 
+        send_notification
+        ;;
+esac
