@@ -1,8 +1,0 @@
-ea9de75d3c3dac39c2316fab4d28e76768be6f26 fd1d5cd134eb753b4c8b279b907d31d550f81e17 LiberiBg <matheo.ngn@gmail.com> 1703439219 +0100	commit: add slock config
-fd1d5cd134eb753b4c8b279b907d31d550f81e17 ea9de75d3c3dac39c2316fab4d28e76768be6f26 LiberiBg <matheo.ngn@gmail.com> 1703439383 +0100	reset: moving to HEAD~1
-ea9de75d3c3dac39c2316fab4d28e76768be6f26 3419f36d10afd4bf60590e7883856f9e98098b20 LiberiBg <matheo.ngn@gmail.com> 1703439469 +0100	commit: add slock config
-3419f36d10afd4bf60590e7883856f9e98098b20 ea9de75d3c3dac39c2316fab4d28e76768be6f26 LiberiBg <matheo.ngn@gmail.com> 1703439556 +0100	reset: moving to HEAD~1
-ea9de75d3c3dac39c2316fab4d28e76768be6f26 3419f36d10afd4bf60590e7883856f9e98098b20 LiberiBg <matheo.ngn@gmail.com> 1703439584 +0100	pull: Fast-forward
-3419f36d10afd4bf60590e7883856f9e98098b20 90588060fc95f70a4fddc1e9c1e719c5562a72f9 LiberiBg <matheo.ngn@gmail.com> 1722029928 +0200	commit: add /etc/X11/xorg.conf.d
-90588060fc95f70a4fddc1e9c1e719c5562a72f9 32a8794ec02ee45bf767929f27c4f9767bf006f3 LiberiBg <matheo.ngn@gmail.com> 1722030508 +0200	commit: add fonts
-32a8794ec02ee45bf767929f27c4f9767bf006f3 c6d457f0e62d93474371f05237534288f7278313 LiberiBg <matheo.ngn@gmail.com> 1722033571 +0200	commit: add change script
