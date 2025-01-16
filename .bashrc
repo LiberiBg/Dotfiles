@@ -7,9 +7,11 @@
 
 # Exports
 export PATH=$PATH:/home/kappa/.spicetify
-
+export CHROME_BIN='/usr/bin/chromium'
 export EDITOR='/.local/bin/bin/nvim'
 export VISUAL='/.local/bin/bin/nvim'
+export _JAVA_AWT_WM_NONREPARENTING=1
+_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
  #Alias
  
 
@@ -23,17 +25,22 @@ alias free='free -m'
 alias confBspwm='nvim $HOME/.config/bspwm/bspwmrc'
 alias confSxhkd='nvim $HOME/.config/sxhkd/sxhkdrc'
 alias confbashrc='nvim $HOME/.bashrc'
-alias yaysyu='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
-alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
+alias update='yay -Syu --noconfirm'              # update standard pkgs and AUR pkgs (yay)
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 alias ls='exa --icons'
 alias ll='exa --icons --long'
 alias la='exa --icons --all'
 alias onBluetooth='sudo systemctl start bluetooth'
+alias onDocker='sudo systemctl start docker'
 alias onHTTP='python -m http.server'
 alias shutdown='shutdown -h now'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dcup='docker compose up'
+alias zouzou-up='wg-quick up zouzou'
+kb() {
+  setxkbmap -device `xinput list | grep "Virtual core XTEST keyboard" | sed -e 's/.\+=\([0-9]\+\).\+/\1/'` fr
+}
+alias tgpt='tgpt --provider duckduckgo $1'
 
 # Setting up colors
 BLACK="\[\e[30m\]"
@@ -95,6 +102,6 @@ PROMPT_COMMAND=set_prompt
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
     . /usr/share/bash-completion/bash_completion
 
-pfetch
+neofetch
 #colorscript -r
 
